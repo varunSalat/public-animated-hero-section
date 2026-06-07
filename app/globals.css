@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: auto;
+  background: #fbfaf7;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: clip;
+  background: #fbfaf7;
+  color: #0f0f0f;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+.dashboard-perspective {
+  perspective: 1200px;
+}
+
+.dashboard-frame {
+  width: min(1200px, calc(100vw - 3rem), calc((100svh - 5rem) * 1.333333));
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.dashboard-card-target {
+  top: 25%;
+  left: 67%;
+  width: 26%;
+  aspect-ratio: 512 / 350;
+  will-change: transform;
+}
+.dashboard-card-incoming-target {
+  top: 25%;
+  left: 15%;
+  width: 50%;
+  aspect-ratio: 200 / 400;
+  will-change: transform;
+}
+
+::selection {
+  background: #d9ff5c;
+  color: #0f0f0f;
+}
+
+@media (max-width: 640px) {
+  .dashboard-frame {
+    width: min(480px, calc(100vw - 2rem), calc((100svh - 4rem) * 1.333333));
+  }
+}
+
+.dashboard-perspective {
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
