@@ -1,5 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
+import { List } from "lucide-react";
 
 export default function DashboardHeader() {
   const shouldReduceMotion = useReducedMotion();
@@ -12,9 +13,9 @@ export default function DashboardHeader() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="flex flex-col items-center"
       >
-        <span className="inline-flex items-center gap-2 rounded-full border border-black/8 bg-white/80 px-4 py-2 text-sm font-medium text-[#242426] shadow-[0_8px_30px_rgba(36,36,56,0.05)] backdrop-blur">
-          <span className="grid size-5 place-items-center rounded-full bg-[#ebedfa]">
-            <span className="size-1.5 rounded-full bg-[#d9ff5c]" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-black/8 bg-white/80 px-1 py-1 text-sm font-medium text-[#242426] shadow-[0_8px_30px_rgba(36,36,56,0.05)] backdrop-blur">
+          <span className="rounded-full bg-[#d9ff5c] p-2 text-[#0f0f0f]">
+            <List size={16} />
           </span>
           AI-Powered Finance
         </span>
